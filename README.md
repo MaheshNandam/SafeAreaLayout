@@ -15,4 +15,8 @@ Step1 : git clone https://github.com/MaheshNandam/SafeAreaLayout.git;
 
 Step2 : react-native init SafeAreaLayout
 
-Step3 : 
+Step3 : react-native run-ios
+
+Preview: Without SafeAreaView and With SafeAreaView
+
+
