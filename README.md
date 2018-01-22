@@ -5,6 +5,9 @@ At Glimpse, On iPhone X, the SafeAreaView provides support for your app from top
 Support : 
 
     - both ios and android
+    
+Before & After Implementation Screenshots:
+
 
 Requirements: 
 
