@@ -3,6 +3,7 @@
 At Glimpse, On iPhone X, the SafeAreaView provides support for your app from top to bottom, edge to edge alignment in portrait orientation, This helps you to prevent interface elements from getting clipped or covered by positioning them away from the sensor housing, the display's rounded corners, and the Home indicator. 
 
 Support : 
+
     - both ios and android
 
 Requirements: 
@@ -17,24 +18,26 @@ How to Use:
 
     import React, { Component } from 'react';
     import {
-        Platform,
-        StyleSheet,
-        Text,
+        ..
         View,
-        SafeAreaView,
-        StatusBar
+        SafeAreaView
     } from 'react-native';
 
-    export default class SafeAreaLayout extends Component<{}> {
+    export default class SafeAreaLayout extends Component {
         render() {
             return (
-                <SafeAreaView forceInset={{bottom: 'always'}} style={styles.container}>
+                <SafeAreaView forceInset={{bottom: 'always'}}>
                     <View />
                 </SafeAreaView>
             );
         }
-    }
+    }    
+    
+Note: 
 
+    forceInset - useful to apply force padding on the view, because in few cases 'SafeAreaView' drives unexpected incorrect alignment of the view due to its onLayout function calls measureInWindow on the views, 
+    
+    forceInset={{ object: 'Value' }}, here 'object' key's are - 'top, bottom, left, right, vertical, horizontal', and value key's are - 'always, never, interger'.
 
 How to execute:
 
