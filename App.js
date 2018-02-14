@@ -9,9 +9,7 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View,
-    SafeAreaView,
-    StatusBar
+  View
 } from 'react-native';
 
 import SafeAreaLayout from './SafeAreaLayout';
@@ -19,9 +17,9 @@ import SafeAreaLayout from './SafeAreaLayout';
 export default class App extends Component<{}> {
   render() {
     return (
-      <SafeAreaView forceInset={{bottom: 'always'}} style={styles.container}>
+      <View style={styles.container}>
         <SafeAreaLayout />
-      </SafeAreaView>
+      </View>
     );
   }
 }
