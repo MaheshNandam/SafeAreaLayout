@@ -8,9 +8,7 @@ Support :
     
 Before & After Implementation Screenshots:
 
-<img width="413" height='400' alt="screen shot 2018-02-19 at 4 01 34 pm" src="https://user-images.githubusercontent.com/13198616/36374403-3d9dcd1c-1591-11e8-9c6f-5e0a094c4428.png">
-
-<img width="386" height='400' alt="screen shot 2018-02-19 at 3 57 07 pm" src="https://user-images.githubusercontent.com/13198616/36374478-770a8978-1591-11e8-9ea1-2c6b209ba74d.png">
+<img width="413" height='1000' alt="screen shot 2018-02-19 at 4 01 34 pm" src="https://user-images.githubusercontent.com/13198616/36374403-3d9dcd1c-1591-11e8-9c6f-5e0a094c4428.png"><img width="386" height='1000' alt="screen shot 2018-02-19 at 3 57 07 pm" src="https://user-images.githubusercontent.com/13198616/36374478-770a8978-1591-11e8-9ea1-2c6b209ba74d.png">
 
 
 
