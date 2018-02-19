@@ -14,9 +14,9 @@ import {
   StatusBar
 } from 'react-native';
 
-export default class App extends Component<{}> {
+export default class App extends Component {
   render() {
-    return (
+    return(
       <SafeAreaView forceInset={{bottom: 'always'}} style={styles.container}>
           <StatusBar barStyle='dark-content' />
           <View style={styles.body}>
