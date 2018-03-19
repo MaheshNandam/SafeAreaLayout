@@ -39,7 +39,7 @@ Note:
 
     forceInset - useful to apply force padding on the view, because in few cases 'SafeAreaView' drives unexpected incorrect alignment of the view due to its onLayout function calls measureInWindow on the views, 
     
-    forceInset={{ object: 'Value' }}, here 'object' key's are - 'top, bottom, left, right, vertical, horizontal', and value key's are - 'always, never, interger'.
+    forceInset={{ object: 'Value' }}, here 'object' key's are - 'top, bottom, left, right, vertical, horizontal', and value key's are - 'always, never, integer'.
 
 How to execute:
 
