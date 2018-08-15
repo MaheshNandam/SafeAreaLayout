@@ -7,7 +7,7 @@ import Home from './components/Home';
 
 const AppNavigator = createStackNavigator(
   {
-    screen1: {
+    mainPage: {
       screen: Home,
       navigationOptions: {
         title: 'Header',
@@ -15,10 +15,10 @@ const AppNavigator = createStackNavigator(
     },
   },
   {
-    initialRouterName: 'bottomTab',
+    initialRouterName: 'mainPage',
     navigationOptions: {
       headerStyle: {
-        backgroundColor: "#212121",
+        backgroundColor: "green",
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
