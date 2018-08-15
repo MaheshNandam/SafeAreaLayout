@@ -1,44 +1,16 @@
 import React, { Component } from 'react';
 import { View, Text, Dimensions } from 'react-native';
-import { createStackNavigator ,createBottomTabNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 
 //Tab Screens
-import Page1 from './components/Page1';
-import Page2 from './components/Page2';
-
-const BottomNavigator = createBottomTabNavigator(
-  {
-    screen1: {
-      screen: Page1,
-      navigationOptions:{
-        title: 'Screen 1',
-      }
-    },
-    screen2:{
-      screen: Page2,
-      navigationOptions: {
-        title: 'Screen 2',
-      }
-    }
-  },
-  {
-    initialRouterName: 'screen2',
-    swipeEnabled: true,
-    tabBarOptions:{
-      activeTintColor: 'blue',
-      inactiveTintColor: '#000'
-    },
-  }
-)
+import Home from './components/Home';
 
 const AppNavigator = createStackNavigator(
   {
-    bottomTab: {
-      screen: BottomNavigator,
-      navigationOptions:{
-        title: 'Page Header',
-        headerLeft: <View></View>,
-        headerRight: <View></View>
+    screen1: {
+      screen: Home,
+      navigationOptions: {
+        title: 'Header',
       }
     },
   },

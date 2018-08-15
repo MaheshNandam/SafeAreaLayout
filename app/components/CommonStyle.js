@@ -11,6 +11,7 @@ import DeviceInfo from 'react-native-device-info';
 const CommonStyle = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: '#212121',
     },
     body: {
         paddingHorizontal: 20,
