@@ -2,9 +2,9 @@
 
 At Glimpse, On iPhone X, the SafeAreaView provides support for your app from top to bottom, edge to edge alignment in portrait orientation, This helps you to prevent interface elements from getting clipped or covered by positioning them away from the sensor housing, the display's rounded corners, and the Home indicator. 
     
-Without & With Implementation Screenshots:
+Screenshot:
 
-![safeareaviewthemeimage](https://user-images.githubusercontent.com/13198616/44731226-5a694c00-ab00-11e8-9254-e555a8ecb2d9.gif)
+<img width="386" height='800' alt="screen shot 2018-02-19 at 3 57 07 pm" src="https://user-images.githubusercontent.com/13198616/44731226-5a694c00-ab00-11e8-9254-e555a8ecb2d9.gif">
 
 
 Requirements: 
