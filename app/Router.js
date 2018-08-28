@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Dimensions } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
+import PageHeader from './PageHeader';
 
 //Tab Screens
 import Home from './components/Home';
@@ -10,7 +11,9 @@ const AppNavigator = createStackNavigator(
     mainPage: {
       screen: Home,
       navigationOptions: {
-        title: 'Header',
+        headerTitle: <PageHeader />,
+        headerLeft: null,
+        headerRight: null
       }
     },
   },
@@ -18,7 +21,7 @@ const AppNavigator = createStackNavigator(
     initialRouterName: 'mainPage',
     navigationOptions: {
       headerStyle: {
-        backgroundColor: "green",
+        backgroundColor: "#000",
       },
       headerTintColor: '#fff',
       headerTitleStyle: {

@@ -16,7 +16,7 @@ const CommonStyle = StyleSheet.create({
     body: {
         paddingHorizontal: 20,
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#B5B9BD',
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -27,11 +27,39 @@ const CommonStyle = StyleSheet.create({
     },
     welcome: {
         fontSize: 15,
+        fontWeight: '800',
         color: '#000',
         marginVertical: 10,
     },
     titleText: {
         fontSize: 15,
+        fontWeight: 'bold'
+    },
+    buttonStyle: {
+        backgroundColor: '#fff',
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 0
+        },
+        shadowOpacity: 1,
+        shadowRadius: 5,
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        borderRadius: 3,
+        marginTop: 40
+    },
+    //pageHeader 
+    headerStyle:{
+        backgroundColor: '#000',
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingVertical: 15,
+    },
+    headerText:{
+        color: '#fff',
+        fontSize: 14,
         fontWeight: 'bold'
     }
 });

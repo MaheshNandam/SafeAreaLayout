@@ -28,15 +28,16 @@ export default class Home extends Component {
     this.setState({ toggleValue: !this.state.toggleValue });
   }
 
-  bodyView(bodyText) {
+  textView(bodyText) {
     return (
       <View style={CommonStyle.body}>
         <StatusBar barStyle='light-content' />
-        <Text style={CommonStyle.welcome}>
-          {
-            bodyText
-          }
-        </Text>
+        <Text style={CommonStyle.welcome}>{bodyText}</Text>
+        <TouchableWithoutFeedback onPress={this.check}>
+          <View style={CommonStyle.buttonStyle}>
+            <Text>Click Here</Text>
+          </View>
+        </TouchableWithoutFeedback>
       </View>
     )
   }
@@ -45,11 +46,7 @@ export default class Home extends Component {
     if (this.state.toggleValue) {
       return (
         <SafeAreaView forceInset={{ bottom: 'always' }} style={CommonStyle.container}>
-          <TouchableWithoutFeedback onPress={this.check}>
-            {
-              this.bodyView('With SafeAreaView')
-            }
-          </TouchableWithoutFeedback>
+          {this.textView('With SafeAreaView')}
         </SafeAreaView>
       )
     }
@@ -57,9 +54,7 @@ export default class Home extends Component {
       return (
         <TouchableWithoutFeedback onPress={this.check}>
           <View style={CommonStyle.container}>
-            {
-              this.bodyView('Without SafeAreaView')
-            }
+            {this.textView('Without SafeAreaView')}
           </View>
         </TouchableWithoutFeedback>
       )
