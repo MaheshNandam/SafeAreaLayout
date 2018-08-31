@@ -2,44 +2,49 @@
 
 At Glimpse, On iPhone X, the SafeAreaView provides support for your app from top to bottom, edge to edge alignment in portrait orientation, This helps you to prevent interface elements from getting clipped or covered by positioning them away from the sensor housing, the display's rounded corners, and the Home indicator. 
     
-Without & With Implementation Screenshots:
+Screenshot:
 
-<img width="386" height='800' alt="screen shot 2018-02-19 at 3 57 07 pm" src="https://user-images.githubusercontent.com/13198616/36374478-770a8978-1591-11e8-9ea1-2c6b209ba74d.png">  <img width="413" height='800' alt="screen shot 2018-02-19 at 4 01 34 pm" src="https://user-images.githubusercontent.com/13198616/36374403-3d9dcd1c-1591-11e8-9c6f-5e0a094c4428.png">
-
+<img width="386" height='800' alt="screen shot 2018-02-19 at 3 57 07 pm" src="https://user-images.githubusercontent.com/13198616/44731226-5a694c00-ab00-11e8-9254-e555a8ecb2d9.gif">
 
 
 Requirements: 
 
-    RN Version - >= 0.50
-
-    Android Studio - >= 3.0.0
-
-    xCode - >= 9.0 
+    RN Version : 0.50 (suggested version)
+    
+    React Navigation :  2.11.0 (suggested version)
 
 How to Use:
 
-    import React, { Component } from 'react';
-    import {
-        ..
-        View,
-        SafeAreaView
-    } from 'react-native';
-
-    export default class SafeAreaLayout extends Component {
-        render() {
-            return (
-                <SafeAreaView forceInset={{bottom: 'always'}}>
-                    <View />
-                </SafeAreaView>
-            );
-        }
-    }    
-    
-Note: 
-
-    forceInset - useful to apply force padding on the view, because in few cases 'SafeAreaView' drives unexpected incorrect alignment of the view due to its onLayout function calls measureInWindow on the views, 
-    
-    forceInset={{ object: 'Value' }}, here 'object' key's are - 'top, bottom, left, right, vertical, horizontal', and value key's are - 'always, never, integer'.
+      import {SafeAreaView } from ''react-navigation”;
+      
+      ...
+            <SafeAreaView>
+                <Text>{"Default Text"}</Text>
+            </SafeAreaView>
+      ...
+      
+      const sampleProject = createSwitchNavigator(
+	    {
+		   homeScreen: {
+			title: ’Home Screen’, // defining the screen title as headerTitle using customised component
+			headerLeft: <View></View>,
+			headerRight: <View></View>
+		   } 
+	    },
+	    navigationOptions:{
+		   headerStyle:{
+			    backgroundColor: ‘#212121’, // this will handle the cutOff at the top the screen
+		   },
+		   headerTitleStyle:{
+	            fontSize: 14,
+                fontWeight: '800',
+                textAlign: 'center',
+                flex: 1
+		   } // to make header centre to the screen
+	    }
+      )
+      
+- If you failed to give headerStyle property then your app header will looks incompatible due to the cutoff design at the top of the screen.    
 
 How to execute:
 
