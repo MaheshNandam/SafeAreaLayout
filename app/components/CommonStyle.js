@@ -17,8 +17,8 @@ const CommonStyle = StyleSheet.create({
         paddingHorizontal: 20,
         flex: 1,
         backgroundColor: '#B5B9BD',
-        justifyContent: 'center',
-        alignItems: 'center',
+        // justifyContent: 'center',
+        // alignItems: 'center',
     },
     inlineBlock: {
         flexDirection: 'row',
@@ -42,12 +42,14 @@ const CommonStyle = StyleSheet.create({
             width: 0,
             height: 0
         },
+        alignItems: 'center',
         shadowOpacity: 1,
         shadowRadius: 5,
         paddingVertical: 10,
         paddingHorizontal: 20,
         borderRadius: 3,
-        marginTop: 40
+        marginTop: 40,
+        marginHorizontal: 30,
     },
     //pageHeader 
     headerStyle:{
@@ -59,9 +61,27 @@ const CommonStyle = StyleSheet.create({
     },
     headerText:{
         color: '#fff',
-        fontSize: 14,
-        fontWeight: 'bold'
+        fontSize: 18,
+        fontWeight: 'bold',
+    },
+    pageContent:{
+        flex: 1
+    },
+    textView:{
+        alignItems: 'center',
+        flex: 1,
+    },
+    centerText:{
+        textAlign: 'center', 
+        fontWeight: 'bold', 
+        fontSize: 18
+    },
+    edgeText:{
+        fontSize: 18,
+        fontWeight: 'bold',
+
     }
+    
 });
 
 module.exports = CommonStyle;

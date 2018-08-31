@@ -13,7 +13,7 @@ import {
   TouchableWithoutFeedback,
   StatusBar
 } from 'react-native';
-import { SafeAreaView } from 'react-navigation'; //from ˆ2 version
+import { SafeAreaView, NavigationActions} from 'react-navigation'; //from ˆ2 version
 import CommonStyle from './CommonStyle';
 
 export default class Home extends Component {
@@ -22,31 +22,40 @@ export default class Home extends Component {
     this.state = {
       toggleValue: true
     }
+    this.renderPage = this.renderPage.bind(this);
   }
 
-  check = () => {
-    this.setState({ toggleValue: !this.state.toggleValue });
+  check(title){
+    this.setState(prevState => { toggleValue: !prevState.toggleValue });
   }
 
-  textView(bodyText) {
+  pageContent(headerTitle) {
     return (
       <View style={CommonStyle.body}>
         <StatusBar barStyle='light-content' />
-        <Text style={CommonStyle.welcome}>{bodyText}</Text>
-        <TouchableWithoutFeedback onPress={this.check}>
-          <View style={CommonStyle.buttonStyle}>
-            <Text>Click Here</Text>
+        <View style={CommonStyle.pageContent}>
+          <View style={[CommonStyle.textView, {justifyContent: 'flex-start'}]}>
+            <Text style={CommonStyle.edgeText}>Top Text</Text>
           </View>
-        </TouchableWithoutFeedback>
+          <Text style={CommonStyle.centerText}>{headerTitle}</Text>          
+          <TouchableWithoutFeedback onPress={() => { this.check(headerTitle)}}>
+            <View style={CommonStyle.buttonStyle}>
+              <Text>{'Click Here'}</Text>
+            </View>
+          </TouchableWithoutFeedback>
+          <View style={[CommonStyle.textView, { justifyContent: 'flex-end' }]}>
+            <Text style={CommonStyle.edgeText}>Bottom Text</Text>
+          </View>
+        </View>
       </View>
     )
   }
 
-  renderToggle() {
+  renderPage() {
     if (this.state.toggleValue) {
       return (
         <SafeAreaView forceInset={{ bottom: 'always' }} style={CommonStyle.container}>
-          {this.textView('With SafeAreaView')}
+          {this.pageContent('With SafeAreaView')}
         </SafeAreaView>
       )
     }
@@ -54,7 +63,9 @@ export default class Home extends Component {
       return (
         <TouchableWithoutFeedback onPress={this.check}>
           <View style={CommonStyle.container}>
-            {this.textView('Without SafeAreaView')}
+            {
+              this.pageContent('Without SafeAreaView')
+            }
           </View>
         </TouchableWithoutFeedback>
       )
@@ -63,7 +74,7 @@ export default class Home extends Component {
 
   render() {
     return (
-      this.renderToggle()
+      this.renderPage()
     );
   }
 }

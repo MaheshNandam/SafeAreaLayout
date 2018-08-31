@@ -10,15 +10,15 @@ const AppNavigator = createStackNavigator(
   {
     mainPage: {
       screen: Home,
-      navigationOptions: {
-        headerTitle: <PageHeader />,
+      navigationOptions:({navigation})=>({
+        headerTitle: <PageHeader navigation={navigation}/>,
         headerLeft: null,
         headerRight: null
-      }
+      })
     },
   },
   {
-    initialRouterName: 'mainPage',
+    // initialRouterName: 'mainPage',
     navigationOptions: {
       headerStyle: {
         backgroundColor: "#000",

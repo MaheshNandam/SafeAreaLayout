@@ -6,10 +6,11 @@ import {
 import CommonStyle from './components/CommonStyle';
 
 export default class PageHeader extends Component{
-    render(){
+    
+    render(){      
         return(
             <View style={CommonStyle.headerStyle}>
-                <Text style={CommonStyle.headerText}>PageHeader</Text>
+                <Text style={CommonStyle.headerText}>{'Page Title'}</Text>
             </View>
         )
     }
